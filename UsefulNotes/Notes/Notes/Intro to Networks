@@ -1,0 +1,17 @@
+Intro to Networks
+
+What is a network?
+-Fundamentally it's just a bunch of connected entities
+-These are typically entitled nodes
+-We call these connections "links"
+
+Computers on a network are connected through an ip address that is specific to eachother
+What do messages really look like on the internet?
+-Messages are split up into packages
+-Each packed is composed of:
+	a source ip address (the sender)
+	a target ip address (the receiver)
+	a sequence number (to preserve the order of the message)
+	a part of the message
+-The packet could be sent in any order!
+-Network packets are NUMBERED to keep order so that when the receiver gets the message, it can be correctly reconstructed

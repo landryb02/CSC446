@@ -1,0 +1,27 @@
+General: Command. This is general Vitaly Shlykov. Requesting 2 factor authentication authorization.
+General: Lima
+General: Alfa
+General: Lima
+General: India
+General: Lima
+General: Uniform
+General: Lima
+General: Echo
+General: Lima
+General: Oscar
+Command: Confirmed.
+Command: Yankee.
+Command: Oscar.
+Command: Uniform.
+Command: Romeo.
+Command: Echo.
+Command: Papa.
+Command: Romeo.
+Command: Echo.
+Command: Tango.
+Command: Tango.
+Command: Yankee.
+Command: Golf.
+Command: Oscar.
+Command: Oscar.
+Command: Delta.

@@ -34,5 +34,5 @@ authorizer.add_anonymous(homedir=directory2, perm="elr")
 handler = FTPHandler
 handler.authorizer = authorizer
 
-server = FTPServer(("127.0.0.1", int(config.PORT2)), handler)
+server = FTPServer(('', int(config.PORT2)), handler)
 server.serve_forever()

@@ -10,3 +10,9 @@ PORT2 = "9999"
 # server authentication information
 USERNAME = "admin"
 PASSWORD = "47e0eed5345b3dac4fb6%6O"
+
+# how often (in seconds) the server should wait between updating conversations
+SERVER_UPDATE_WAIT = 1
+
+# misc debug print statements
+DEBUG = False

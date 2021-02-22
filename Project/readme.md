@@ -1,5 +1,6 @@
 # METAL GEAR COVERT
 CSC446/CYEN402 Final Project for team Big Covert.
+
 Group Members:  Landry Baudouin, Brandon Vessel, Jeremy Choyce, Jacob Mathews
 
 ## Installation

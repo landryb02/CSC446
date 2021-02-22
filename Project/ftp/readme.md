@@ -9,4 +9,5 @@ Creates files with encrpyted permissions based on the information from the conve
 
 ## Information for challenge
 Chat timing server port.
+
 GoTTY port and username.

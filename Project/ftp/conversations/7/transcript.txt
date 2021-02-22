@@ -1,0 +1,13 @@
+General: Command. This is general Vitaly Shlykov. Requesting login authorization.
+General: Username.
+General: Lima
+General: Alfa
+General: Lima
+General: India
+General: Lima
+General: Uniform
+General: Lima
+General: Echo
+General: Lima
+General: Oscar
+Command: Confirmed. Sending Bravo team to escort you to the waypoint.

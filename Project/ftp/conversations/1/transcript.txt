@@ -1,0 +1,6 @@
+Guard 1: Command, come in.
+Guard 1: ... do you copy?
+Command: Loud and clear private, come through.
+Guard 1: Remind me, what was the instruction to access the central terminal? I fell asleep during debrief.
+Command: God, I've tried so hard to make something of you idiots. Just use http on port <FINAL PORT> server. It's not that hard to remember, find a sticky note or something. If you need me again, you know where to find me.
+Guard 1: Understood.

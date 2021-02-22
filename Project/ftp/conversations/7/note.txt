@@ -1,0 +1,2 @@
+the general authenticates with code "lalilulelo"
+command responds with the proper 2 factor authentication code

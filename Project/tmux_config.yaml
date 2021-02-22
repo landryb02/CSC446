@@ -1,0 +1,29 @@
+session_name: Command Center
+windows:
+- window_name: dev window
+  layout: tiled
+  panes:
+    - shell_command:
+        - cd ftp
+        - cls
+        - python3 ftp_server1.py
+    - shell_command:
+        - cd ftp
+        - cls
+        - python3 ftp_server2.py
+    - shell_command:
+        - cd ftp
+        - cls
+        - python3 conversation_engine.py
+    - shell_command:
+        - cd gotty
+        - cls
+        - ./start.sh
+    - shell_command:
+        - cd timing
+        - cls
+        - ./start.sh
+    - shell_command:
+        - cls
+        - ./information.sh
+        - bash

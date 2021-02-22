@@ -5,7 +5,7 @@ First step of challenge. Teams must traverse through the ftp servers to listen i
 Each server houses several folders corresponding to a character talking in a converation.
 
 ## Conversation Engine
-Creates files with encrpyted permissions for FTP servers to transfer.
+Creates files with encrpyted permissions based on the information from the conversations folder for FTP servers.
 
 ## Information for challenge
 Chat timing server port.

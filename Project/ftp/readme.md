@@ -1,0 +1,12 @@
+# FTP Permsissions
+First step of challenge. Teams must traverse through the ftp servers to listen in on conversations encoded in the permissions of the files. 
+
+## FTP Servers 1 and 2
+Each server houses several folders corresponding to a character talking in a converation.
+
+## Conversation Engine
+Creates files with encrpyted permissions for FTP servers to transfer.
+
+## Information for challenge
+Chat timing server port.
+GoTTY port and username.

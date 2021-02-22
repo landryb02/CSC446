@@ -13,7 +13,7 @@ import time
 from hashlib import sha256
 
 tfa = ""
-with open("2fa.txt") as f:
+with open("password.txt") as f:
     tfa = f.readlines()[0]
 
 hashh = sha256(upas.lower().encode() + b"salt me SALT ME").hexdigest()

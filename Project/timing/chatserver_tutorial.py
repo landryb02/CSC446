@@ -6,7 +6,7 @@ from binascii import hexlify
 DEBUG = False
 
 # set the port for client connections
-port = 31339
+port = 56540
 
 # create the socket and bind it to the port
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

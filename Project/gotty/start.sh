@@ -1,1 +1,1 @@
-gotty --permit-write -p 2010 python3 metal_gear.py
+gotty --permit-write -p 38941 python3 metal_gear.py

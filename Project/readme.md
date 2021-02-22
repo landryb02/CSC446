@@ -9,12 +9,12 @@ To install necessary libraries and make other preparations to run code without e
 ```
 
 ## Usage
-Launches tmux session display annd run all server ports at once.
+To launch tmux session to display and run all server ports at once:
 ```bash
 ./start.sh
 ```
 
-To end session prematurely.
+To end session prematurely:
 ```bash
 tmux kill-session
 ```

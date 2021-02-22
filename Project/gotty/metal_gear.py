@@ -77,7 +77,7 @@ def printCentered(text):
     startHeight = int((height - len(lines))/2)
 
     # print until we get where we need to be
-    for i in range(startHeight):
+    for _ in range(startHeight):
         print("")
 
     # print each line
@@ -116,6 +116,8 @@ PATSLEEP = True
 
 #cls()
 resetColor()
+cls()
+import os
 
 
 
@@ -139,7 +141,8 @@ def completed():
   selfdestructable = True
 
 selfdestruct = str(input("Would you like to self-destruct?"))
-
+os.system("./image2ascii -f Metal_Gear_Rex.png")
+time.sleep(99)
 
 '''
 import curses

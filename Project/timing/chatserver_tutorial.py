@@ -29,8 +29,8 @@ for i in covert_message:
 
 msg = list(msg)
 
-# import thread module 
-from _thread import *
+# import thread module
+from _thread import start_new_thread
 import threading 
 
 if(DEBUG):print(len(covert_bin))
@@ -75,6 +75,8 @@ def serveClient(c):
         c.send("EOF".encode())
         c.close()
     except:pass
+
+print("Timing Server Initialized On Port: {}".format(port))
 
 # a forever loop until client wants to exit 
 while True:

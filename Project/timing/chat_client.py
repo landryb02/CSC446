@@ -3,13 +3,13 @@
 # CSC 442 / CYEN 301
 # Chat Covert Channel
 # April 24, 2020
+# Updated for CSC 446 2020
 
 import socket
 from sys import stdout
 from time import time
 
 ## CONFIG ##
-
 # enables debugging output
 DEBUG = False
 
@@ -22,6 +22,7 @@ delay_00 = 0.5
 delay_01 = 1.0
 delay_10 = 1.5
 delay_11 = 2.0
+#############
 
 ## FUNCTIONS ##
 

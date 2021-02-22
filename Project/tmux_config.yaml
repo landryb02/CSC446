@@ -4,12 +4,18 @@ windows:
   layout: tiled
   panes:
     - shell_command:
+        - cd ftp
         - python3 ftp_server1.py
     - shell_command:
+        - cd ftp
         - python3 ftp_server2.py
     - shell_command:
+        - cd ftp
         - python3 conversation_engine.py
     - shell_command:
-        - ./information.sh
+        - cd gotty
+        - ./start.sh
+    - shell_command:
+        - bash
     - shell_command:
         - bash

@@ -178,7 +178,7 @@ class Conversation():
             os.system("chmod {} {}".format("".join(permissions[i]), os.path.join(directory, filename)))
             os.system("chmod u-w {}".format(os.path.join(directory, filename)))
 
-        print("Time taken:", time() - start)
+        if(config.DEBUG):print("Time taken:", time() - start)
     
     
     def update(self):

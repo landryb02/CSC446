@@ -238,6 +238,10 @@ def getConversations():
 # debug
 print("Initializing")
 
+# sleep for a little bit so the FTP servers
+# can setup the folder structure
+sleep(3)
+
 # initialize chmod bit mapping dictionary
 util.initializeBitstringMap()
 

@@ -6,24 +6,25 @@ windows:
     - shell_command:
         - cd ftp
         - cls
-        - python3 ftp_server1.py
+        - su csc446 -c 'python3 ftp_server1.py'
     - shell_command:
         - cd ftp
         - cls
-        - python3 ftp_server2.py
+        - su csc446 -c 'python3 ftp_server2.py'
     - shell_command:
         - cd ftp
         - cls
-        - python3 conversation_engine.py
+        - su csc446 -c 'python3 conversation_engine.py'
     - shell_command:
         - cd gotty
         - cls
-        - ./start.sh
+        - su csc446 -c './start.sh'
     - shell_command:
         - cd timing
         - cls
-        - ./start.sh
+        - su csc446 -c './start.sh'
     - shell_command:
+        - export PATH="$PATH:."
         - cls
         - ./information.sh
         - bash

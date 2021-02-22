@@ -264,4 +264,4 @@ while(1):
     for i in range(len(conversations)):
         conversations[i].update()
         # wait for a little bit
-        sleep(config.SERVER_UPDATE_WAIT)
+        sleep(config.SERVER_UPDATE_WAIT/float(len(conversations)))

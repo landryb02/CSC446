@@ -11,7 +11,7 @@ from ftplib import FTP
 METHOD=7
 
 # filepath
-FOLDER="1"
+FOLDER="5"
 
 # host information
 HOST="minechamber.us.to"

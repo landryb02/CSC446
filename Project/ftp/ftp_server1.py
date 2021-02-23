@@ -23,16 +23,14 @@ directory1 = os.path.join(directory, "public1")
 directory2 = os.path.join(directory, "public2")
 
 # actually create ftp server
-authorizer = DummyAuthorizer()
+handler = FTPHandler
+handler.timeout=30
 
 # create administrator
-#authorizer.add_user(username=config.USERNAME, password=config.PASSWORD, homedir=directory1, perm="elradfmwMT")
+#handler.authorizer.add_user(username=config.USERNAME, password=config.PASSWORD, homedir=directory1, perm="elradfmwMT")
 
 # create anonymous user
-authorizer.add_anonymous(homedir=directory1, perm="elr")
-
-handler = FTPHandler
-handler.authorizer = authorizer
+handler.authorizer.add_anonymous(homedir=directory1, perm="elr")
 
 server = FTPServer(('', int(config.PORT1)), handler)
 server.serve_forever()

@@ -1,5 +1,5 @@
 # start the tmux window
-tmuxp load tmux_config.yaml
+su csc446 -c "tmuxp load tmux_config.yaml"
 
 # kill everything the csc446 user has running
 skill -KILL -u csc446

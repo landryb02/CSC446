@@ -8,6 +8,11 @@ To install necessary libraries and make other preparations to run code without e
 ```bash
 ./install.sh
 ```
+Allow the following ports IN through the firewall:
+- ftp1 9611
+- ftp2 9612
+- timing 56540
+- web interface 38941
 
 ## Usage
 To launch tmux session to display and run all server ports at once:

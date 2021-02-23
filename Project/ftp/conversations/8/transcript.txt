@@ -3,8 +3,7 @@ Prisoner: psssssssst.
 Prisoner: Snake!
 Snake: Kept you waiting, huh?
 Prisoner: The colonel's got a message for ya.
-Prisoner: Check your comm on frequency <TIMING PORT>.
+Prisoner: Check your comm on frequency 56540.
 Snake: Is it encoded?
-Prisoner: Shhhh! They'll hear you!
 Prisoner: All four timings are in order.
 Snake: Got it.

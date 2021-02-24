@@ -1,1 +1,1 @@
-python3 chatserver_tutorial.py
+python3 chatserver.py

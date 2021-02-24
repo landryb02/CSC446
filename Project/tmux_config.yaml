@@ -5,25 +5,26 @@ windows:
   panes:
     - shell_command:
         - cd ftp
-        - cls
-        - python3 ftp_server1.py
+        - clear
+        - 'python3 ftp_server1.py'
     - shell_command:
         - cd ftp
-        - cls
-        - python3 ftp_server2.py
+        - clear
+        - 'python3 ftp_server2.py'
     - shell_command:
         - cd ftp
-        - cls
-        - python3 conversation_engine.py
+        - clear
+        - 'python3 conversation_engine.py'
     - shell_command:
         - cd gotty
-        - cls
-        - ./start.sh
+        - clear
+        - './start.sh'
     - shell_command:
         - cd timing
-        - cls
-        - ./start.sh
+        - clear
+        - './start.sh'
     - shell_command:
-        - cls
+        - export PATH="$PATH:."
+        - clear
         - ./information.sh
         - bash

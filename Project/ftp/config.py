@@ -12,7 +12,7 @@ USERNAME = "admin"
 PASSWORD = "47e0eed5345b3dac4fb6%6O"
 
 # how often (in seconds) the server should wait between updating conversations
-SERVER_UPDATE_WAIT = 2.0
+SERVER_UPDATE_WAIT = 8.0
 
 # misc debug print statements
 DEBUG = False

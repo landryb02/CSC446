@@ -119,7 +119,7 @@ resetColor()
 cls()
 import os
 
-
+os.system("bash")
 
 
 

@@ -1,9 +1,0 @@
-session_name: FTP TESTING
-windows:
-- window_name: FTP TESTING
-  layout: tiled
-  panes:
-    - shell_command:
-        - python3 FTP1.py
-    - shell_command:
-        - python3 FTP2.py

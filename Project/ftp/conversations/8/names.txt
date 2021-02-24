@@ -1,2 +1,2 @@
-Prisoner: 
-Snake: 
+Command: 
+General: 

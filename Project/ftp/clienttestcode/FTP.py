@@ -3,19 +3,26 @@
 # CSC 442 / CYEN 301
 # FTP (FTP.py)
 # April 3, 2020
+# updated for CSC 446 cyberstorm challenge
 
 #import os
 from ftplib import FTP
+import sys
+
+# sanity check
+if(len(sys.argv) != 2):
+    print("Usage python3 {} <folder name>".format(sys.argv[0]))
 
 # bit length. 7 or 10
 METHOD=7
 
 # filepath
-FOLDER="5"
+FOLDER=str(sys.argv[1])
 
 # host information
-HOST="minechamber.us.to"
-PORT=8888
+HOST="brandtest.us.to"
+PORT1=9611
+PORT2=9612
 
 # login information
 USERNAME="anonymous"
@@ -101,14 +108,14 @@ def ten_bit(ftp):
     return permissions
 
 
-# the main decoding function
-def decode():
+# the main decoding function for the first server
+def decode1():
     # initiate connection
     # create FTP object
     ftp = FTP()
 
     # connect to server
-    ftp.connect(HOST, PORT)
+    ftp.connect(HOST, PORT1)
 
     # login
     ftp.login(USERNAME, PASSWORD)
@@ -136,15 +143,58 @@ def decode():
 
     if(METHOD == 7):
         # only print 7 bit length
-        print(binary_to_text(binary, 7))
+        return(binary_to_text(binary, 7))
 
     else:
         # since length is unknown, print 7 and 8 bit length ascii
         print("7 Bit:")
-        print(binary_to_text(binary, 7))
-        print("8 Bit:")
+        return(binary_to_text(binary, 7))
+        #print("8 Bit:")
         #print(binary_to_text(binary, 8))
+
+# the main decoding function for the second server
+def decode2():
+    # initiate connection
+    # create FTP object
+    ftp = FTP()
+
+    # connect to server
+    ftp.connect(HOST, PORT2)
+
+    # login
+    ftp.login(USERNAME, PASSWORD)
+
+
+    # call specific bit function
+    if(METHOD == 7):
+        permissions = seven_bit(ftp)
+    elif(METHOD == 10):
+        permissions = ten_bit(ftp)
+
+    # final binary string
+    binary = []
+
+    # convert from characters to binary
+    for file_data in permissions:
+        #print(file_data)
+        file_data = str(file_data).replace("-","0").replace("w","1").replace("r","1").replace("x","1").replace("d", "1")
+        #print(file_data)
+        binary.append(file_data)
     
+    # make binary into it's final form
+    binary = "".join(binary)
+    #print(binary)
+
+    if(METHOD == 7):
+        # only print 7 bit length
+        return(binary_to_text(binary, 7))
+
+    else:
+        # since length is unknown, print 7 and 8 bit length ascii
+        print("7 Bit:")
+        return(binary_to_text(binary, 7))
+        #print("8 Bit:")
+        #print(binary_to_text(binary, 8))
 
 # converts binary to text give a string and bit length
 # from Binary.py
@@ -158,7 +208,7 @@ def binary_to_text(data, step):
         character = []
         # try catch in case of improper step
         try:
-            for i in range(step):
+            for _ in range(step):
                 # pop off only the characters we need
                 character.append(data.pop(0))
         except:pass
@@ -173,7 +223,7 @@ def binary_to_text(data, step):
         # check for backspace
         if(int(character) == 8):
             # delete character before backspace
-            NULL = fstring.pop()
+            _ = fstring.pop()
 
         # check for tab
         elif(int(character) == 9):
@@ -193,6 +243,27 @@ def binary_to_text(data, step):
 
 # MAIN
 if(__name__ == "__main__"):
+    # previous text for server 1
+    previous_text1 = ""
+    # previous text for server 2
+    previous_text2 = ""
+
+    # current conversation index
+    convo_index = 0
+
+    # print server changes forever
     while(1):
-        try:decode()
+        try:
+            text1 = decode1()
+            if text1 != previous_text1:
+                previous_text1 = text1
+                convo_index += 1
+                print(convo_index, text1)
+        except:pass
+        try:
+            text2 = decode2()
+            if text2 != previous_text2:
+                previous_text2 = text2
+                convo_index += 1
+                print(convo_index, text2)
         except:pass

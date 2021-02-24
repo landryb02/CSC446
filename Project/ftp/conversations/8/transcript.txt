@@ -1,12 +1,13 @@
-Prisoner: pssst.
-Prisoner: psssssssst.
-Prisoner: Snake!
-Snake: Kept you waiting, huh?
-Prisoner: The colonel's got a message for ya.
-Snake: Well, spill it.
-Prisoner: He says you'll need this: HsivyeZddmk
-Prisoner: Check your comm on frequency 56540 for something about a key.
-Snake: Is the communication line encoded?
-Prisoner: Shhhh! They'll hear you!
-Prisoner: All four timings are in order.
-Snake: Understood.
+General: Command. This is general Vitaly Shlykov. Requesting login authorization.
+General: Username.
+General: Lima
+General: Alfa
+General: Lima
+General: India
+General: Lima
+General: Uniform
+General: Lima
+General: Echo
+General: Lima
+General: Oscar
+Command: Confirmed. Sending Bravo team to escort you to the waypoint.

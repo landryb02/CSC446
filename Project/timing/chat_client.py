@@ -14,7 +14,7 @@ from time import time
 DEBUG = False
 
 # set the server's IP address and port
-ip = "minechamber.us.to"
+ip = "brandtest.us.to"
 port = 31339
 
 # delay config

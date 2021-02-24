@@ -1,6 +1,18 @@
-Guard 1: Command, come in.
-Guard 1: ... do you copy?
-Command: Loud and clear private, come through.
-Guard 1: Remind me, what was the instruction to access the central terminal? I fell asleep during debrief.
-Command: God, I've tried so hard to make something of you idiots. Just use http on port <FINAL PORT> server. It's not that hard to remember, find a sticky note or something. If you need me again, you know where to find me.
-Guard 1: Understood.
+Guard 2: Sorry, got held up.
+Guard 1: What happened?
+Guard 2: They want this resupply going full speed. If we don't get going, it's my paycheck.
+Guard 1: That Gear in the back, huh?
+Guard 1: When do we get our super guns.
+Guard 2: The big hitters get the big hitters, man.
+Guard 1: We got big hitters all over these days.
+Guard 2: Whaddya mean?
+Guard 1: You see those two came in the other day?
+Guard 2: Yeah?
+Guard 2: Inspecting the base.
+Guard 1: More like keeping tabs on it.
+Guard 1: They act like they own the place.
+Guard 1: Who are those guys?
+Guard 2: Word is they got their start here. Guess you could call it a homecoming.
+Guard 1: So that's how it is.
+Guard 1: Crap. We'd better move.
+Guard 2: Yeah.

@@ -1,0 +1,25 @@
+session_name: client
+windows:
+- window_name: ftp-test
+  layout: tiled
+  panes:
+    - shell_command:
+        - 'python3 FTP.py 1'
+    - shell_command:
+        - 'python3 FTP.py 2'
+    - shell_command:
+        - 'python3 FTP.py 3'
+    - shell_command:
+        - 'python3 FTP.py 4'
+    - shell_command:
+        - 'python3 FTP.py 5'
+    - shell_command:
+        - 'python3 FTP.py 6'
+    - shell_command:
+        - 'python3 FTP.py 7'
+    - shell_command:
+        - 'python3 FTP.py 8'
+    - shell_command:
+        - export PATH="$PATH:."
+        - clear
+        - bash

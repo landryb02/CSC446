@@ -18,24 +18,32 @@ with open("password.txt") as f:
 
 hashh = sha256(upas.lower().encode() + b"salt me SALT ME").hexdigest()
 
-if hashh != tfa:
-    print("Incorrect. This attempt has been logged.")
-    time.sleep(1)
-    exit()
-else:
-    print("Access Granted!")
-    time.sleep(1)
+#if hashh != tfa:
+#    print("Invalid username. This attempt has been logged.")
+#    time.sleep(1)
+#    exit()
 
-from os import get_terminal_size
+tfa = ""
+with open("password.txt") as f:
+    tfa = f.readlines()[0]
 
-ascii_rex = ""
-with open("rex.txt") as f:
-    ascii_rex = "".join(f.readlines())
+hashh = sha256(upas.lower().encode() + b"salt me SALT ME").hexdigest()
+
+#if hashh != tfa:
+#    print("Incorrect password. This attempt has been logged.")
+#    time.sleep(1)
+#    exit()
+#else:
+#    print("Access Granted!")
+#    time.sleep(1)
+
+# access granted, import the other libraries
+import os
 
 def printCenteredX(text):
     '''Prints text centered in the terminal on the X axis'''
     # get terminal width
-    width = get_terminal_size()[0]
+    width = os.get_terminal_size()[0]
 
     # break string into lines
     lines = text.split("\n")
@@ -62,7 +70,7 @@ def cls():
 def printCentered(text):
     '''Prints text centered square in the terminal'''
     # get terminal dimentions
-    dimensions = get_terminal_size()
+    dimensions = os.get_terminal_size()
 
     # get height
     height = dimensions[1]
@@ -91,98 +99,160 @@ def printCentered(text):
         # print with padding
         print(" "*padding, line)
 
+def printRex():
+    '''Prints metal gear rex ascii art'''
+    os.system("./image2ascii -f Metal_Gear_Rex.png")
 
-#@print("{}".format(ascii_rex))
+# menu functions
+def completeMission():
+    global selfdestructable
+    teamname = str(input("Congrats. You finished. Input your team name:"))
+    
+    with open("output.txt", "w") as f:
+        f.write("{} {}\n".format(teamname, time.time()))
+    print("You can keep playing with the system if you want...")
+    selfdestructable = True
+
+def selfDestruct():
+    global selfdestructable
+    global teamname
+    if (selfdestructable):
+        print("YAY")
+        time.sleep(0.3)
+
+def getTeamName():
+    pass
+
+#def regionalInformation():
+#    print("")
+#    tmp=input()
+
 cls()
-greenify()
-printCentered("{}".format(ascii_rex))
 
-PATSLEEP = True
+# variables
+# whether or not to sleep
+PATSLEEP = False
 
-#printCenteredX("\nWelcome to the Patriot Global MG Control System")
-#if PATSLEEP:time.sleep(2)
-#printCenteredX("""---- PGMGCS v1.2 ----""")
-#if PATSLEEP:time.sleep(3)
-#printCenteredX("""[SYSTEM] CONFIGURING ENCRYPTED CHANNEL """)
-#if PATSLEEP:time.sleep(3)
-#printCenteredX("""[SYSTEM] CONNECTION ESTABLISHED        """)
-#if PATSLEEP:time.sleep(1.5)
-#printCenteredX("""[SYSTEM] CONNECTING TO REX 1           """)
-#if PATSLEEP:time.sleep(3)
-#printCenteredX("""[SYSTEM] Rex Unit 1 Status: ONLINE     """)
-#if PATSLEEP:time.sleep(3)
-#printCenteredX("""[SYSTEM] LAUNCHING COMMAND INTERFACE   """)
-#if PATSLEEP:time.sleep(3)
+# sleep to fix display
+time.sleep(0.3)
 
-#cls()
+# print to fix display
+print(" ")
+
+time.sleep(1)
+printCenteredX("\nWelcome to the Patriot Metal Gear Global Control System")
+if PATSLEEP:time.sleep(1)
+printCenteredX("""---- PMGGCS v1.2 ----""")
+if PATSLEEP:time.sleep(3)
+printCenteredX("""[SYSTEM] CONFIGURING TLS ENCRYPTED CHANNEL """)
+if PATSLEEP:time.sleep(3)
+printCenteredX("""[SYSTEM] CONNECTION ESTABLISHED            """)
+if PATSLEEP:time.sleep(1.5)
+printCenteredX("""[SYSTEM] CHECKING USER AUTHORIZATION       """)
+if PATSLEEP:time.sleep(1.5)
+printCenteredX("""[SYSTEM] TOP SECRET CLEARANCE GRANTED      """)
+if PATSLEEP:time.sleep(1.5)
+printCenteredX("""[SYSTEM] CONNECTING TO REX 1               """)
+if PATSLEEP:time.sleep(3)
+printCenteredX("""[SYSTEM] Rex Unit 1 Status: ONLINE         """)
+if PATSLEEP:time.sleep(3)
+printCenteredX("""[SYSTEM] LAUNCHING COMMAND INTERFACE       """)
+if PATSLEEP:time.sleep(3)
+
 resetColor()
 cls()
-import os
 
-os.system("bash")
-
-
-
+#selfdestruct = str(input("Would you like to self-destruct?"))
+#if "y" in selfdestruct.lower():
+#    os.system("tmux kill-session ")
 
 
 
+# Import the necessary packages
+from cursesmenu import *
+from cursesmenu.items import *
 
+## Create the menu
+#menu = CursesMenu(title="---- PMGGCS v1.2 ----", subtitle="Select Region")#, show_exit_option=True)
+#
+#oceania_getteamname = FunctionItem("Reset Database", getTeamName) # gets the team name
+#
+## oceana submenu
+## final menu
+#mg_menu = FunctionItem("Self Destruct [WARNING: IRREVERSIBLE. MAY CAUSE SYSTEM FAILURE", selfDestruct)
+#
+## troop movement menu
+#troop_menu = CursesMenu("Penis", "subtitle")
+#troop_menu.append_item(MenuItem("Fuck\nFuckfuck"))
+#
+#oceania_menu2 = CursesMenu()
+#oceania_menu2.append_item(SubmenuItem("Oceania [ONLINE]", mg_menu)) # oceana submenu
+#oceania_menu2.append_item(FunctionItem("Regional Information", selfDestruct)) # prints regional information
+#oceania_menu2.append_item(FunctionItem("Troop Movement", troop_menu)) # prints troop movements
+#oceania_menu2.append_item(FunctionItem("Metal Gear Nuclear Control System", mg_menu))
+#oceania_main = SubmenuItem("Oceania [ONLINE]", oceania_menu2) # oceania selection from main
+#
+## append all items
+#menu.append_item(MenuItem("Africa [OFFLINE]"))
+#menu.append_item(MenuItem("Asia East [OFFLINE]"))
+#menu.append_item(MenuItem("Asia SE-Mainland [OFFLINE]"))
+#menu.append_item(MenuItem("Asia SE-Maritime [OFFLINE]"))
+#menu.append_item(MenuItem("Canada [OFFLINE]"))
+#menu.append_item(MenuItem("Europe [OFFLINE]"))
+#menu.append_item(MenuItem("Middle East [OFFLINE]"))
+#menu.append_item(MenuItem("North Pole [OFFLINE]"))
+#menu.append_item(oceania_main)
+#menu.append_item(MenuItem("US-East [OFFLINE]"))
+#menu.append_item(MenuItem("US-West [OFFLINE]"))
+#menu.append_item(ExitItem("Exit"))
+#
+## A FunctionItem runs a Python function when selected
+#function_item = FunctionItem("Call a Python function", completeMission)
+#
+## A CommandItem runs a console command
+#command_item = CommandItem("Run a console command",  "touch hello.txt")
+#
+## A SelectionMenu constructs a menu from a list of strings
+#selection_menu = SelectionMenu(["item1", "item2", "item3"])
+#
+## A SubmenuItem lets you add a menu (the selection_menu above, for example)
+## as a submenu of another menu
+#
+#
+## Once we're done creating them, we just add the items to the menu
+##menu.append_item(menu_item)
+##menu.append_item(function_item)
+##menu.append_item(command_item)
+##menu.append_item(submenu_item)
+##menu.append_item(menu_item)
+##menu.append_item()
 
+# Create the menu
+menu = CursesMenu("Title", "Subtitle")
 
+# Create some items
 
+# MenuItem is the base class for all items, it doesn't do anything when selected
+menu_item = MenuItem("Menu Item")
 
-def completed():
-  global selfdestructable
-  teamname = str(input("Congrats. You finished. Input your team name:"))
-  
-  with open("output.txt", "w") as f:
-      f.write("{} {}\n".format(teamname, time.time()))
-  print("You can keep playing with the system if you want...")
-  selfdestructable = True
+# A FunctionItem runs a Python function when selected
+function_item = FunctionItem("Call a Python function", input, ["Enter an input"])
 
-selfdestruct = str(input("Would you like to self-destruct?"))
-os.system("./image2ascii -f Metal_Gear_Rex.png")
-time.sleep(99)
+# A CommandItem runs a console command
+command_item = CommandItem("Run a console command",  "touch hello.txt")
 
-'''
-import curses
+# A SelectionMenu constructs a menu from a list of strings
+selection_menu = SelectionMenu(["item1", "item2", "item3"])
 
-# The `screen` is a window that acts as the master window
-# that takes up the whole screen. Other windows created
-# later will get painted on to the `screen` window.
-screen = curses.initscr()
+# A SubmenuItem lets you add a menu (the selection_menu above, for example)
+# as a submenu of another menu
+submenu_item = SubmenuItem("Submenu item", selection_menu, menu)
 
-# lines, columns, start line, start column
-my_window = curses.newwin(15, 20, 0, 0)
+# Once we're done creating them, we just add the items to the menu
+menu.append_item(menu_item)
+menu.append_item(function_item)
+menu.append_item(command_item)
+menu.append_item(submenu_item)
 
-# Long strings will wrap to the next line automatically
-# to stay within the window
-my_window.addstr(4, 4, "Hello from 4,4")
-my_window.addstr(5, 15, "Hello from 5,15 with a long string")
-
-# Print the window to the screen
-my_window.refresh()
-curses.napms(2000)
-
-# Clear the screen, clearing my_window contents that were printed to screen
-# my_window will retain its contents until my_window.clear() is called.
-screen.clear()
-screen.refresh()
-
-# Move the window and put it back on screen
-# If we didn't clear the screen before doing this,
-# the original window contents would remain on the screen
-# and we would see the window text twice.
-my_window.mvwin(10, 10)
-my_window.refresh()
-curses.napms(1000)
-
-# Clear the window and redraw over the current window space
-# This does not require clearing the whole screen, because the window
-# has not moved position.
-my_window.clear()
-my_window.refresh()
-curses.napms(1000)
-
-curses.endwin()
-'''
+# Finally, we call show to show the menu and allow the user to interact
+menu.show()

@@ -1,3 +1,4 @@
+# try statement keeps the clients from seeing error statements
 try:
     teamname = str(input("Team Name:")).rstrip()
     from colorama import Fore, Style
@@ -32,11 +33,28 @@ try:
     hashh = sha256(upas.lower().encode() + b"salt me SALT ME").hexdigest()
 
     if hashh != tfa:
-        print("Incorrect password. This attempt has been logged.")
+        print("Correct username. Incorrect password. This attempt has been logged. Your progress has been saved.")
+
+        # log correct username
+        import time
+        ts = time.gmtime()
+        # Iso Format
+        ts = time.strftime("%c", ts)
+        # Sun Feb 21 22:34:41 2021
+        with open("log.txt", "a") as f:
+            f.write("{} USERNAME CORRECT {}\n".format(ts, teamname))
         time.sleep(1)
         exit()
     else:
-        print("Access Granted!")
+        print("Access Granted! Your progress has been saved.")
+        
+        # log correct password
+        import time
+        ts = time.gmtime()
+        # Iso Format
+        ts = time.strftime("%c", ts)
+        with open("log.txt", "a") as f:
+            f.write("{} PASSWORD CORRECT {}\n".format(ts, teamname))
         time.sleep(1)
 
     # access granted, import the other libraries
@@ -394,5 +412,4 @@ Do not be alarmed when everything crashes :).''')
     # create and run the control menu
     head = createNodes()
     head.run()
-except:
-    pass
+except:pass

@@ -6,7 +6,7 @@ Each server houses several folders corresponding to a character talking in a con
 Server 1 is hosted in public1 and Server 2 is hosted in public2.
 
 ## Conversation Engine
-Creates files with encrpyted permissions based on the information from the conversations folder for FTP servers.
+Creates files with encrypted permissions based on the information from the conversations folder for FTP servers.
 
 ## Information for challenge
 Chat timing server port.

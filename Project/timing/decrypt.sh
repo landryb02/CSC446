@@ -1,0 +1,1 @@
+cat encrypted.txt | python3 vigenere.py -d pliskin

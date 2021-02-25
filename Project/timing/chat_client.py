@@ -11,7 +11,7 @@ from time import time
 
 ## CONFIG ##
 # enables debugging output
-DEBUG = False
+DEBUG = True
 
 # set the server's IP address and port
 ip = "brandtest.us.to"
@@ -97,9 +97,9 @@ message_length = 0
 
 # receive data until EOF
 data = s.recv(4096)
-while (data.rstrip("\n") != "EOF"):
+while (data.decode().rstrip("\n") != "EOF"):
     # output the data
-    stdout.write(data)
+    stdout.write(data.decode())
     stdout.flush()
     # start the "timer", get more data, and end the "timer"
     t0 = time()
@@ -107,8 +107,6 @@ while (data.rstrip("\n") != "EOF"):
     t1 = time()
     # calculate the time delta (and output if debugging)
     delta = round(t1 - t0, 3)
-
-    if(DEBUG):print("\n", delta)
 
     # add delta to the covert message list
     covert_message[message_length] = delta

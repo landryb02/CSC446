@@ -1,0 +1,1 @@
+cat plaintext.txt | python3 vigenere.py -e pliskin

@@ -18,7 +18,7 @@ delay_10 = 1.5
 delay_11 = 2.0
 
 # set the message
-msg = "Signal Test: One, two, three, four. Anyone copy? Over."
+msg = "Signal Test: One, two, three, four. Over"
 covert_message="pliskin" + "EOF"
 
 # turn covert message into bit message

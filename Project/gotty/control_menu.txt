@@ -1,0 +1,262 @@
+# represents the behavior of the control system
+control_layout='''
+Region selection
+- Africa [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+- Alaska [ONLINE]
+    Alaska [ONLINE]
+    - Facilities
+        Facilities
+        - Clear [OFFLINE]
+            [ CONNECTION FAILED ]
+            - Return
+        - Eielson [ONLINE]
+            [ CONNECTION FAILED ]
+            - Return
+        - Elmendorf [OFFLINE]
+            [ CONNECTION FAILED ]
+            - Return
+        - Fort Greely [OFFLINE]
+            [ CONNECTION FAILED ]
+            - Return
+        - Fort Richardson [OFFLINE]
+            [ CONNECTION FAILED ]
+            - Return
+        - Fort Wainwright [ONLINE]
+            [ CONNECTION FAILED ]
+            - Return
+        - ISC Kodiak [OFFLINE]
+            [ ACCESS DENIED ]
+            - Return
+        - Juneau [ONLINE]
+            [ CONNECTION FAILED ]
+            - Return
+        - Shadow Moses Island [ONLINE]
+            Shadow Moses Island [ONLINE]
+            - Facility Management
+                Facility Management
+                - Power
+                    [ ACCESS DENIED ]
+                    - Return
+                - Water
+                    [ ACCESS DENIED ]
+                    - Return
+            - Military Information
+                Military Information
+                Troop Information
+
+                Artillery 28
+                Bombers   13
+                Fighters  26
+                Infantry  10,842
+                Tanks     34
+                SPECIAL   8
+                - Return
+            - Nuclear Control System
+                Nuclear Control System [CLASSIFIED]
+                - Metal Gear REX1 [ONLINE]
+                    Metal Gear REX1 [ONLINE]
+                    
+                    Status Disarmed
+                    
+                    Ammo
+                    • Bullets        300,000
+                    • Nuclear ICBMs  8
+                    • Rockets        16,000
+                    - Nuclear Launch Option
+                        Nuclear Launch Option
+                        - Launch
+                            Metal Gear REX1 Nuclear Launch System
+                            
+                            WARNING!!! WARNING!!! WARNING!!!
+
+                            Metal Gear REX1 is currently set to mode: Physical Network Deletion Failsafe
+                            REX1 is set to target:
+                            • Satellite AL
+                            • Satellite GW
+                            • Satellite JD
+                            • Satellite TJ
+                            • Satellite TR
+                            • Shadow Moses Island
+                            Description: REX is currently programmed to eliminate the entire PMGGCS and itself
+                            in the event of enemy capture or automated defense system malfunction.
+                            
+                            Confirm launch?
+                            - LAUNCH
+                                Congratulations! You have beaten the challenge!
+                                Metal Gear REX has launched 8 ICBMs to all the network satellites.
+                                It also has self-destructed and left a nuclear wasteland
+                                in western Alaska.
+                                Your success has been recorded in the system logs.
+                                The entire system will crash as soon as the missiles hit.
+                                Do not be alarmed when everything crashes :).
+                            - ABORT
+                        - Return
+                    - Return
+                - Metal Gear REX2 [OFFLINE]
+                    [ CONNECTION FAILED ]
+                    - Return
+                - Metal Gear REX3 [OFFLINE]
+                    [ CONNECTION FAILED ]
+                    - Return
+                - Metal Gear REX4 [OFFLINE]
+                    [ CONNECTION FAILED ]
+                    - Return
+                - Metal Gear REX5 [OFFLINE]
+                    [ CONNECTION FAILED ]
+                    - Return
+                - Metal Gear REX6 [OFFLINE]
+                    [ CONNECTION FAILED ]
+                    - Return
+                - Metal Gear REX7 [OFFLINE]
+                    [ CONNECTION FAILED ]
+                    - Return
+                - Metal Gear REX8 [OFFLINE]
+                    [ CONNECTION FAILED ]
+                    - Return
+        - Valdez [OFFLINE]
+            [ CONNECTION FAILED ]
+            - Return
+    - Regional Information
+        Regional Information
+        
+        Latitude  51°20'N to 71°50'N
+        Longitude 130°W to 172°E
+        
+        Government
+        • Country United States
+        • Capital Juneau
+        • Largest city Anchorage
+        • Largest metro Anchorage metropolitan area
+        
+        Area
+        • Total   663,268 sq mi (1,717,856 km²)
+        • Land    571,951 sq mi (1,481,346 km²)
+        • Water   91,316 sq mi (236,507 km²)  13.77%
+        
+        Dimensions
+        • Length  1,420 mi (2,285 km)
+        • Width   2,261 mi (3,639 km)
+        
+        Population
+        • Total   710,249
+        • Rank    48th
+        • Density 1.26/sq mi (0.49/km²)
+        - Return
+    - Military Information
+        Troop Information
+        
+        Artillery 247
+        Bombers   20
+        Fighters  68
+        Infantry  54,763
+        Tanks     70
+        SPECIAL   8
+
+        Bases     10
+        - Return
+- Asia East [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+- Asia SE-Mainland [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+- Asia SE-Maritime [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+- Canada [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+- Europe [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+- Middle East [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+- North Pole [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+- Oceana [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+- US-East [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+- US-West [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+- Disconnect
+'''
+
+
+'''
+- Facility Management
+    Facility Management
+    - Power
+        [ ACCESS DENIED ]
+        - Return
+    - Water
+        [ ACCESS DENIED ]
+        - Return
+- Nuclear Control System
+    Nuclear Control System [CLASSIFIED]
+    - Metal Gear REX1 [ONLINE]
+        Metal Gear REX1 [ONLINE]
+        
+        Status Disarmed
+        
+        Ammo
+        • Bullets        300,000
+        • Nuclear ICBMs  8
+        • Rockets        8,000
+        - Nuclear Launch Option
+            Nuclear Launch Option
+            - Launch
+                Metal Gear REX 1 Nuclear Launch System
+                
+                WARNING!!! WARNING!!! WARNING!!!
+                Metal Gear REX is currently set to mode: Physical Network Deletion Failsafe
+                REX is set to target:
+                • Satellite AL
+                • Satellite GW
+                • Satellite JD
+                • Satellite TJ
+                • Satellite TR
+                • Shadow Moses
+                Description: REX is currently programmed to eliminate the entire PMGGCS and itself
+                in the event of enemy capture or automated defense system malfunction.
+                
+                Confirm launch?
+                - LAUNCH
+                    Congratulations! You have beaten the challenge!
+                    Metal Gear REX has launched 8 ICBMs to all the network satellites.
+                    It also has self-destructed and left a crater at the facility...
+                    Your success has been recorded in the system logs.
+                    The entire system will crash as soon as the missiles hit.
+                    Do not be alarmed when everything crashes :).
+                - ABORT
+            - Return
+        - Return
+    - Metal Gear REX2 [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+    - Metal Gear REX3 [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+    - Metal Gear REX4 [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+    - Metal Gear REX5 [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+    - Metal Gear REX6 [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+    - Metal Gear REX7 [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+    - Metal Gear REX8 [OFFLINE]
+    [ CONNECTION FAILED ]
+    - Return
+'''

@@ -15,7 +15,7 @@ DEBUG = False
 
 # set the server's IP address and port
 ip = "brandtest.us.to"
-port = 31339
+port = 56540
 
 # delay config
 delay_00 = 0.5

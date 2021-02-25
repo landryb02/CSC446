@@ -2,7 +2,7 @@
 First step of challenge. Teams must traverse through the ftp servers to listen in on conversations encoded in the permissions of the files. 
 
 ## FTP Servers 1 and 2
-Each server houses several folders corresponding to a character talking in a converation.
+Each server houses several folders corresponding to a character talking in a conversation.
 Server 1 is hosted in public1 and Server 2 is hosted in public2.
 
 ## Conversation Engine

@@ -36,7 +36,6 @@ try:
         print("Correct username. Incorrect password. This attempt has been logged. Your progress has been saved.")
 
         # log correct username
-        import time
         ts = time.gmtime()
         # Iso Format
         ts = time.strftime("%c", ts)
@@ -49,7 +48,6 @@ try:
         print("Access Granted! Your progress has been saved.")
         
         # log correct password
-        import time
         ts = time.gmtime()
         # Iso Format
         ts = time.strftime("%c", ts)
